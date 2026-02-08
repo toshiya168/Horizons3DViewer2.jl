@@ -2,3 +2,17 @@ name = "Horizons3DViewer2"
 uuid = "b09b5891-b050-4434-b1d3-8b6c7269954c"
 authors = ["toshiya168 <toshiya.168@gmail.com>"]
 version = "0.1.0"
+
+[deps]
+AstroTime = "c61b5328-d09d-5e37-a9a8-0eb41c39009c"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+EphemerisSources = "858900df-f7ae-402a-aa8c-3e4ef85aa271"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
+
+[compat]
+AstroTime = "0.7.3"
+DifferentialEquations = "7.17.0"
+EphemerisSources = "1.0.0"
+GLMakie = "0.13.8"
+ProgressMeter = "1.11.0"
