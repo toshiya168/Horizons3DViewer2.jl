@@ -130,7 +130,7 @@ function default_axis3(parent;
 
     # Create a 3-D axis with common default settings
     ax = Axis3(parent;
-        #aspect = :data,                    # Use data aspect ratio
+        aspect = :data,                    # Use data aspect ratio
         xlabel = "x", ylabel = "y",        # Axis labels
         viewmode = viewmode,               # Camera view mode
         clip = clip,                       # Clipping option

@@ -236,7 +236,7 @@ function make_line_fixed_frame(primary_body_wrt_sun::AbstractMatrix,
                                ẑ::AbstractVector = [0.0, 0.0, 1.0])
 
     secondary_body_wrt_primary = secondary_body_wrt_sun - primary_body_wrt_sun   # Secondary state with respect to the primary body
-    sc_wrt_primary             = sc_wrt_sun - primary_body_wrt_sun              # Spacecraft state with respect to the primary body
+    sc_wrt_primary             = sc_wrt_sun - primary_body_wrt_sun[1:3,:]              # Spacecraft state with respect to the primary body
 
     @assert size(secondary_body_wrt_primary,1) == 6 "states must be 6×N"         # Ensure the relative state matrix has 6 rows (position + velocity)
     N = size(secondary_body_wrt_primary,2)                                      # Number of epochs (columns)
@@ -313,7 +313,7 @@ function rotate_to_plane_fixed_t0(primary_body_wrt_sun::AbstractMatrix,
                                   ẑ::AbstractVector = [0.0, 0.0, 1.0])
 
     secondary_body_wrt_primary = secondary_body_wrt_sun - primary_body_wrt_sun   # Secondary body state with respect to the primary body
-    sc_wrt_primary             = sc_wrt_sun - primary_body_wrt_sun               # Spacecraft state with respect to the primary body
+    sc_wrt_primary             = sc_wrt_sun - primary_body_wrt_sun[1:3,:]               # Spacecraft state with respect to the primary body
 
     @assert size(secondary_body_wrt_primary,1) == 6 "states must be 6×N"         # Ensure the relative state matrix has 6 rows (position + velocity)
     N = size(secondary_body_wrt_primary,2)                                      # Number of epochs (columns)
